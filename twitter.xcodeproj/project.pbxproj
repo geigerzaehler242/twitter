@@ -15,6 +15,15 @@
 		ED0799862228B1E100994867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0799842228B1E100994867 /* LaunchScreen.storyboard */; };
 		ED0799912228B1E100994867 /* twitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799902228B1E100994867 /* twitterTests.swift */; };
 		ED07999C2228B1E100994867 /* twitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07999B2228B1E100994867 /* twitterUITests.swift */; };
+		ED0799AB2228BB0800994867 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799AA2228BB0800994867 /* Result.swift */; };
+		ED0799AD2228BE9900994867 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799AC2228BE9900994867 /* TwitterAPI.swift */; };
+		ED0799AF2228C36900994867 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0799AE2228C36900994867 /* Alamofire.framework */; };
+		ED0799B02228C36900994867 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED0799AE2228C36900994867 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED0799B32228C37A00994867 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0799B22228C37A00994867 /* AlamofireImage.framework */; };
+		ED0799B42228C37A00994867 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED0799B22228C37A00994867 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED0799B6222A005E00994867 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799B5222A005E00994867 /* MovieTableViewCell.swift */; };
+		ED0799B8222AE60A00994867 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799B7222AE60A00994867 /* MovieDetailViewController.swift */; };
+		ED0799BB222C06BE00994867 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799BA222C06BE00994867 /* Movies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		ED0799B12228C36900994867 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED0799B02228C36900994867 /* Alamofire.framework in Embed Frameworks */,
+				ED0799B42228C37A00994867 /* AlamofireImage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		ED0799752228B1E000994867 /* twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0799782228B1E000994867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +73,13 @@
 		ED0799972228B1E100994867 /* twitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED07999B2228B1E100994867 /* twitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterUITests.swift; sourceTree = "<group>"; };
 		ED07999D2228B1E100994867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED0799AA2228BB0800994867 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		ED0799AC2228BE9900994867 /* TwitterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
+		ED0799AE2228C36900994867 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		ED0799B22228C37A00994867 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		ED0799B5222A005E00994867 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		ED0799B7222AE60A00994867 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		ED0799BA222C06BE00994867 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0799AF2228C36900994867 /* Alamofire.framework in Frameworks */,
+				ED0799B32228C37A00994867 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +112,8 @@
 		ED07996C2228B1E000994867 = {
 			isa = PBXGroup;
 			children = (
+				ED0799B22228C37A00994867 /* AlamofireImage.framework */,
+				ED0799AE2228C36900994867 /* Alamofire.framework */,
 				ED0799772228B1E000994867 /* twitter */,
 				ED07998F2228B1E100994867 /* twitterTests */,
 				ED07999A2228B1E100994867 /* twitterUITests */,
@@ -99,9 +134,13 @@
 		ED0799772228B1E000994867 /* twitter */ = {
 			isa = PBXGroup;
 			children = (
+				ED0799B9222C069C00994867 /* Models */,
+				ED0799A92228B9D500994867 /* API */,
 				ED0799782228B1E000994867 /* AppDelegate.swift */,
 				ED07997A2228B1E000994867 /* ViewController.swift */,
+				ED0799B7222AE60A00994867 /* MovieDetailViewController.swift */,
 				ED07997C2228B1E000994867 /* Main.storyboard */,
+				ED0799B5222A005E00994867 /* MovieTableViewCell.swift */,
 				ED0799822228B1E100994867 /* Assets.xcassets */,
 				ED0799842228B1E100994867 /* LaunchScreen.storyboard */,
 				ED0799872228B1E100994867 /* Info.plist */,
@@ -128,6 +167,23 @@
 			path = twitterUITests;
 			sourceTree = "<group>";
 		};
+		ED0799A92228B9D500994867 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ED0799AA2228BB0800994867 /* Result.swift */,
+				ED0799AC2228BE9900994867 /* TwitterAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		ED0799B9222C069C00994867 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED0799BA222C06BE00994867 /* Movies.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +194,7 @@
 				ED0799712228B1E000994867 /* Sources */,
 				ED0799722228B1E000994867 /* Frameworks */,
 				ED0799732228B1E000994867 /* Resources */,
+				ED0799B12228C36900994867 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +318,11 @@
 			files = (
 				ED07997B2228B1E000994867 /* ViewController.swift in Sources */,
 				ED0799792228B1E000994867 /* AppDelegate.swift in Sources */,
+				ED0799BB222C06BE00994867 /* Movies.swift in Sources */,
+				ED0799B6222A005E00994867 /* MovieTableViewCell.swift in Sources */,
+				ED0799AB2228BB0800994867 /* Result.swift in Sources */,
+				ED0799B8222AE60A00994867 /* MovieDetailViewController.swift in Sources */,
+				ED0799AD2228BE9900994867 /* TwitterAPI.swift in Sources */,
 				ED0799812228B1E000994867 /* twitter.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +500,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z79254QWB6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +522,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z79254QWB6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
