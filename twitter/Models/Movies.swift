@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+final class Movies: NSObject {
+    
+    var theModel : [String:Any] = [:]
+    var theMovies : [ [String:Any] ] = []
+}
