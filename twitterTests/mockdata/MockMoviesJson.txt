@@ -1,0 +1,39 @@
+{
+  "total_results": 2,
+  "total_pages": 1,
+  "page": 1,
+    "results":
+    [
+  		{"id": 671,
+  		"vote_average": 7.8,
+          "genre_ids": [12,14,10751],
+          "original_title": "Harry Potter and the Philosopher's Stone",
+            "backdrop_path": "/hziiv14OpD73u9gAak4XDDfBKa2.jpg",
+            "adult": 0,
+            "popularity": 52.606,
+            "poster_path": "/dCtFvscYcXQKTNvyyaQr2g2UacJ.jpg",
+            "title": "Harry Potter and the Philosopher's Stone",
+            "overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths -- and about the villain who's to blame.",
+            "original_language": "en",
+            "vote_count": 13047,
+            "release_date": "2001-11-16",
+            "video": 0
+  		},
+
+      {"id": 672,
+  		"vote_average": 7.8,
+          "genre_ids": [12,14,10751],
+          "original_title": "Harry Potter and the Chamber of Secrets",
+            "backdrop_path": "/avqzwKn89VetTEvAlBePt3Us6Al.jpg",
+            "adult": 0,
+            "popularity": 52.606,
+            "poster_path": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+            "title": "Harry Potter and the Philosopher's Stone",
+            "overview": "Ignoring threats to his life, Harry returns to Hogwarts to investigate – aided by Ron and Hermione – a mysterious series of attacks.",
+            "original_language": "en",
+            "vote_count": 13047,
+            "release_date": "2001-11-16",
+            "video": 0
+  		}
+    ]
+ }
