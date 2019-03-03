@@ -24,6 +24,8 @@
 		ED0799B6222A005E00994867 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799B5222A005E00994867 /* MovieTableViewCell.swift */; };
 		ED0799B8222AE60A00994867 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799B7222AE60A00994867 /* MovieDetailViewController.swift */; };
 		ED0799BB222C06BE00994867 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799BA222C06BE00994867 /* Movies.swift */; };
+		ED0799BD222C412100994867 /* twitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799BC222C412100994867 /* twitterViewController.swift */; };
+		ED0799C0222C512500994867 /* MockMoviesJson.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED0799BF222C512500994867 /* MockMoviesJson.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		ED0799B5222A005E00994867 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		ED0799B7222AE60A00994867 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		ED0799BA222C06BE00994867 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		ED0799BC222C412100994867 /* twitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterViewController.swift; sourceTree = "<group>"; };
+		ED0799BF222C512500994867 /* MockMoviesJson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MockMoviesJson.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +156,9 @@
 		ED07998F2228B1E100994867 /* twitterTests */ = {
 			isa = PBXGroup;
 			children = (
+				ED0799BE222C50E600994867 /* mockdata */,
 				ED0799902228B1E100994867 /* twitterTests.swift */,
+				ED0799BC222C412100994867 /* twitterViewController.swift */,
 				ED0799922228B1E100994867 /* Info.plist */,
 			);
 			path = twitterTests;
@@ -182,6 +188,14 @@
 				ED0799BA222C06BE00994867 /* Movies.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ED0799BE222C50E600994867 /* mockdata */ = {
+			isa = PBXGroup;
+			children = (
+				ED0799BF222C512500994867 /* MockMoviesJson.txt */,
+			);
+			path = mockdata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0799C0222C512500994867 /* MockMoviesJson.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0799BD222C412100994867 /* twitterViewController.swift in Sources */,
 				ED0799912228B1E100994867 /* twitterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

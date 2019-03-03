@@ -24,9 +24,9 @@ class ViewController: UIViewController {
     
     var theMovies = Movies() //create instance of the model
     
-    private var theTotalPages = 1
-    private var currentPage = 1
-    private var currentMovie = "harry%20potter"
+    var theTotalPages = 1
+    var currentPage = 1
+    var currentMovie = "harry%20potter"
     private var newPageState = PageState.InitialLoad
     
     enum PageState {

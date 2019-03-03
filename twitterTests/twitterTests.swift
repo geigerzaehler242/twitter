@@ -9,19 +9,61 @@
 import XCTest
 @testable import twitter
 
+var theMovies: Movies!
+
 class twitterTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        theMovies = Movies()
+    
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+        theMovies = nil
     }
 
-    func testExample() {
+    func testAPI() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+        let promise = expectation(description: "model update failed")
+        
+        let currentMovie = "harry%20potter" //has 20 movies and 2 pages!
+        let currentPage = 1
+        
+        TwitterAPI().getMovieAsync(theMovie: currentMovie, thePage: currentPage, theModel: theMovies) { (response) in
+            
+            switch response {
+                
+            case .success(let movieDictionary):
+            
+                if let thePageCount = movieDictionary.theModel["total_pages"] as? Int,
+                    let theMoviesModel = movieDictionary.theModel["results"] as? [ [String:Any] ],
+                    let theModelMovies = theMovies.theModel["results"] as? [ [String:Any] ] {
+                    
+                    //theMovies = movieDictionary
+                    
+                    if theMoviesModel.count == 20  && thePageCount ==  2 && theModelMovies.count == 20 {
+                        promise.fulfill()
+                    }
+                    else {
+                        XCTFail("model load failed")
+                    }
+                }
+                
+            case .error(let error):
+                
+                XCTFail("Error: \(error.localizedDescription)")
+                return
+            } //switch
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    
     }
 
     func testPerformanceExample() {
