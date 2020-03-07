@@ -9,21 +9,21 @@
 import XCTest
 @testable import twitter
 
-var theMovies: Movies!
+//var theMovies: Movies!
 
 class twitterTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
-        theMovies = Movies()
+//        theMovies = Movies()
     
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-        theMovies = nil
+ //       theMovies = nil
     }
 
     func testAPI() {
@@ -35,19 +35,16 @@ class twitterTests: XCTestCase {
         let currentMovie = "harry%20potter" //has 20 movies and 2 pages!
         let currentPage = 1
         
-        TwitterAPI().getMovieAsync(theMovie: currentMovie, thePage: currentPage, theModel: theMovies) { (response) in
+        TwitterAPI().getMovieAsync(theMovie: currentMovie, thePage: currentPage) { (response) in
             
             switch response {
                 
             case .success(let movieDictionary):
             
-                if let thePageCount = movieDictionary.theModel["total_pages"] as? Int,
-                    let theMoviesModel = movieDictionary.theModel["results"] as? [ [String:Any] ],
-                    let theModelMovies = theMovies.theModel["results"] as? [ [String:Any] ] {
+                if let thePageCount = movieDictionary.totalPages as? Int,
+                    let theMoviesModel = movieDictionary.all as? [Movie] {
                     
-                    //theMovies = movieDictionary
-                    
-                    if theMoviesModel.count == 20  && thePageCount ==  2 && theModelMovies.count == 20 {
+                    if theMoviesModel.count == 20  && thePageCount ==  2 {
                         promise.fulfill()
                     }
                     else {

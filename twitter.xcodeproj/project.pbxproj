@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,15 +17,13 @@
 		ED07999C2228B1E100994867 /* twitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED07999B2228B1E100994867 /* twitterUITests.swift */; };
 		ED0799AB2228BB0800994867 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799AA2228BB0800994867 /* Result.swift */; };
 		ED0799AD2228BE9900994867 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799AC2228BE9900994867 /* TwitterAPI.swift */; };
-		ED0799AF2228C36900994867 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0799AE2228C36900994867 /* Alamofire.framework */; };
-		ED0799B02228C36900994867 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED0799AE2228C36900994867 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		ED0799B32228C37A00994867 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0799B22228C37A00994867 /* AlamofireImage.framework */; };
-		ED0799B42228C37A00994867 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED0799B22228C37A00994867 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED0799B6222A005E00994867 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799B5222A005E00994867 /* MovieTableViewCell.swift */; };
 		ED0799B8222AE60A00994867 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799B7222AE60A00994867 /* MovieDetailViewController.swift */; };
 		ED0799BB222C06BE00994867 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799BA222C06BE00994867 /* Movies.swift */; };
 		ED0799BD222C412100994867 /* twitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0799BC222C412100994867 /* twitterViewController.swift */; };
 		ED0799C0222C512500994867 /* MockMoviesJson.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED0799BF222C512500994867 /* MockMoviesJson.txt */; };
+		ED4CCD7C2412CA2300216283 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = ED4CCD7B2412CA2300216283 /* AlamofireImage */; };
+		ED56D8092412C7C60005752E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ED56D8082412C7C60005752E /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,21 +43,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		ED0799B12228C36900994867 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				ED0799B02228C36900994867 /* Alamofire.framework in Embed Frameworks */,
-				ED0799B42228C37A00994867 /* AlamofireImage.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		ED0799752228B1E000994867 /* twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0799782228B1E000994867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,8 +60,6 @@
 		ED07999D2228B1E100994867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED0799AA2228BB0800994867 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		ED0799AC2228BE9900994867 /* TwitterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
-		ED0799AE2228C36900994867 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		ED0799B22228C37A00994867 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		ED0799B5222A005E00994867 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		ED0799B7222AE60A00994867 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		ED0799BA222C06BE00994867 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
@@ -91,8 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED0799AF2228C36900994867 /* Alamofire.framework in Frameworks */,
-				ED0799B32228C37A00994867 /* AlamofireImage.framework in Frameworks */,
+				ED56D8092412C7C60005752E /* Alamofire in Frameworks */,
+				ED4CCD7C2412CA2300216283 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +97,6 @@
 		ED07996C2228B1E000994867 = {
 			isa = PBXGroup;
 			children = (
-				ED0799B22228C37A00994867 /* AlamofireImage.framework */,
-				ED0799AE2228C36900994867 /* Alamofire.framework */,
 				ED0799772228B1E000994867 /* twitter */,
 				ED07998F2228B1E100994867 /* twitterTests */,
 				ED07999A2228B1E100994867 /* twitterUITests */,
@@ -208,13 +187,16 @@
 				ED0799712228B1E000994867 /* Sources */,
 				ED0799722228B1E000994867 /* Frameworks */,
 				ED0799732228B1E000994867 /* Resources */,
-				ED0799B12228C36900994867 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = twitter;
+			packageProductDependencies = (
+				ED56D8082412C7C60005752E /* Alamofire */,
+				ED4CCD7B2412CA2300216283 /* AlamofireImage */,
+			);
 			productName = twitter;
 			productReference = ED0799752228B1E000994867 /* twitter.app */;
 			productType = "com.apple.product-type.application";
@@ -267,19 +249,22 @@
 				TargetAttributes = {
 					ED0799742228B1E000994867 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					ED07998B2228B1E100994867 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = ED0799742228B1E000994867;
 					};
 					ED0799962228B1E100994867 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = ED0799742228B1E000994867;
 					};
 				};
 			};
 			buildConfigurationList = ED0799702228B1E000994867 /* Build configuration list for PBXProject "twitter" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -287,6 +272,10 @@
 				Base,
 			);
 			mainGroup = ED07996C2228B1E000994867;
+			packageReferences = (
+				ED56D8072412C7C60005752E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ED4CCD7A2412CA2300216283 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = ED0799762228B1E000994867 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -445,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -500,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -527,7 +516,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = f.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -549,7 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = f.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -569,7 +558,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = f.twitterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twitter.app/twitter";
 			};
@@ -590,7 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = f.twitterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twitter.app/twitter";
 			};
@@ -610,7 +599,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = f.twitterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = twitter;
 			};
@@ -630,7 +619,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = f.twitterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = twitter;
 			};
@@ -676,6 +665,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED4CCD7A2412CA2300216283 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.0;
+			};
+		};
+		ED56D8072412C7C60005752E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED4CCD7B2412CA2300216283 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED4CCD7A2412CA2300216283 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		ED56D8082412C7C60005752E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED56D8072412C7C60005752E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		ED07997F2228B1E000994867 /* twitter.xcdatamodeld */ = {

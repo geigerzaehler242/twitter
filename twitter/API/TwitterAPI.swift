@@ -14,26 +14,29 @@ final class TwitterAPI: NSObject {
     let ImageBaseURL = "https://image.tmdb.org/t/p/w600_and_h900_bestv2"
     let APIBaseURL = "https://api.themoviedb.org/3/search/movie?api_key=2a61185ef6a27f400fd92820ad9e8537&query="
 
-    func getMovieAsync(theMovie: String, thePage: Int, theModel: Movies , _ completion: @escaping (Result<Movies>) -> Void) {
-        
-        let movie = APIBaseURL + theMovie + "&page=" + String(thePage)
-        
-        Alamofire.request(movie).responseJSON { response in
+
+    func getMovieAsync(theMovie: String, thePage: Int, _ completion: @escaping (Result<Films>) -> Void) {
+
+        let movieURL = APIBaseURL + theMovie + "&page=" + String(thePage)
+
+        AF.request(movieURL).validate().responseDecodable(of: Films.self) { (response) in
+
+            guard let films = response.value else {
+                
+                DispatchQueue.main.async {
+                    completion(.error(response.error!))
+                }
+                return
+            }
             
-            if let json = response.result.value as? [String:Any] {
+            DispatchQueue.main.async {
                 
-                theModel.theModel = json
-                
-                DispatchQueue.main.async {
-                    completion(.success(theModel))
-                }
+                completion(.success(films))
             }
-            else {
-                DispatchQueue.main.async {
-                    completion(.error(response.result.error!))
-                }
-            }
+
         } //alamofire
     }
+    
+    
 }
 

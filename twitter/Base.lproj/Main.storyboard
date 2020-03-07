@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,14 +12,14 @@
             <objects>
                 <viewController storyboardIdentifier="MovieViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FbU-Um-eiK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whitebird" translatesAutoresizingMaskIntoConstraints="NO" id="aws-KV-clt">
-                                        <rect key="frame" x="162.5" y="30" width="50" height="50"/>
+                                        <rect key="frame" x="162.66666666666666" y="30" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7yv-Fh-pao"/>
                                             <constraint firstAttribute="width" constant="50" id="n0v-cZ-uUK"/>
@@ -39,7 +36,7 @@
                                         </connections>
                                     </button>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IUc-dt-QSM">
-                                        <rect key="frame" x="330" y="36.5" width="37" height="37"/>
+                                        <rect key="frame" x="330" y="36.666666666666664" width="37" height="36.999999999999993"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.019499270245432854" green="0.23855128884315491" blue="0.4337080717086792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,27 +52,26 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search movie title" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Vrd-xH-4gQ">
-                                <rect key="frame" x="4" y="84" width="367" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="4" y="84" width="367" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xge-ii-hqp">
-                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
+                                <rect key="frame" x="0.0" y="122" width="375" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MovieTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieTableViewCell" rowHeight="228" id="UCf-qf-Wo8" customClass="MovieTableViewCell" customModule="twitter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="228"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UCf-qf-Wo8" id="y88-xC-VQY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="227.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="lYi-xh-3cs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="227.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="228"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QZO-Ps-S0W">
-                                                            <rect key="frame" x="0.0" y="1.5" width="150" height="225"/>
+                                                            <rect key="frame" x="0.0" y="1.6666666666666714" width="150" height="225"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="QZO-Ps-S0W" secondAttribute="height" multiplier="6:9" id="NHZ-VS-ivn"/>
                                                                 <constraint firstAttribute="width" constant="150" id="Q28-V5-436"/>
@@ -83,7 +79,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RVd-xT-jQY">
-                                                            <rect key="frame" x="169" y="83.5" width="186" height="61"/>
+                                                            <rect key="frame" x="169" y="83.666666666666671" width="186" height="61.000000000000014"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owB-Uc-5BO">
                                                                     <rect key="frame" x="0.0" y="0.0" width="186" height="24"/>
@@ -133,8 +129,8 @@
                             <constraint firstItem="FbU-Um-eiK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HaO-4e-G6P"/>
                             <constraint firstItem="xge-ii-hqp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JoI-g0-uAk"/>
                             <constraint firstItem="Vrd-xH-4gQ" firstAttribute="top" secondItem="FbU-Um-eiK" secondAttribute="bottom" constant="4" id="RIv-Bn-bAP"/>
-                            <constraint firstItem="xge-ii-hqp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UTL-Ib-YdZ"/>
                             <constraint firstItem="Vrd-xH-4gQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="WWy-nw-maI"/>
+                            <constraint firstAttribute="bottom" secondItem="xge-ii-hqp" secondAttribute="bottom" id="XGf-8a-8WV"/>
                             <constraint firstItem="xge-ii-hqp" firstAttribute="top" secondItem="Vrd-xH-4gQ" secondAttribute="bottom" constant="4" id="add-HV-F0O"/>
                             <constraint firstItem="FbU-Um-eiK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k3a-R5-SgN"/>
                             <constraint firstItem="xge-ii-hqp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pah-qB-WM4"/>
@@ -149,7 +145,7 @@
                         <outlet property="headerViewHeightConstraint" destination="sRK-bF-5SU" id="51Z-bR-ik5"/>
                         <outlet property="moviesTableView" destination="xge-ii-hqp" id="ifZ-Q0-egZ"/>
                         <outlet property="searchTextField" destination="Vrd-xH-4gQ" id="q86-NA-adj"/>
-                        <segue destination="2po-1q-hrV" kind="presentation" identifier="showMovieDetail" modalTransitionStyle="partialCurl" id="exY-Ls-1H9"/>
+                        <segue destination="2po-1q-hrV" kind="presentation" identifier="showMovieDetail" modalTransitionStyle="coverVertical" id="exY-Ls-1H9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -161,11 +157,11 @@
             <objects>
                 <viewController id="2po-1q-hrV" customClass="MovieDetailViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpw-7x-cX8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nqx-3r-dCc">
-                                <rect key="frame" x="112.5" y="30" width="150" height="225"/>
+                                <rect key="frame" x="112.66666666666669" y="10" width="150" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="225" id="ATJ-79-DtB"/>
                                     <constraint firstAttribute="width" constant="150" id="ckZ-Q4-HoW"/>
@@ -173,7 +169,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aqb-4E-vaq">
-                                <rect key="frame" x="20" y="285" width="335" height="362"/>
+                                <rect key="frame" x="20" y="265" width="335" height="439"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

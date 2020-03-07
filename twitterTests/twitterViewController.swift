@@ -11,6 +11,8 @@ import XCTest
 
 //var theTestMovies: TestMovies!
 
+var movies: [Movie] = []
+
 class twitterViewController: XCTestCase {
 
     var tableVC: ViewController!
@@ -19,7 +21,7 @@ class twitterViewController: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
         
-        theMovies = Movies()
+ //       theMovies = Movies()
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         tableVC = storyboard.instantiateViewController(withIdentifier: "MovieViewController") as? ViewController
@@ -43,15 +45,15 @@ class twitterViewController: XCTestCase {
         }
         
         do {
-            let mockJson = try JSONDecoder().decode(TestMovies.self, from: data)
+            let mockJson = try JSONDecoder().decode(Films.self, from: data)
             
-            theMovies.theMovies = mockJson.results
+            movies = mockJson.all
             
         } catch {
            XCTFail("could not load mock json file")
         }
         
-        tableVC.theMovies = theMovies //force mock data into model
+        tableVC.movies = movies //force mock data into model
         
         tableVC.moviesTableView.reloadData()
     }
@@ -60,7 +62,7 @@ class twitterViewController: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
         tableVC = nil
-        theMovies = nil
+//        theMovies = nil
     }
     
     func testTableViewFirstRow() {

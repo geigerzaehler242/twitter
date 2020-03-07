@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     private let minHeaderHeight: CGFloat = 40;
     private var previousScrollOffset: CGFloat = 0;
     
-    var theMovies = Movies() //create instance of the model
+//    var theMovies = Movies() //create instance of the model
+    var movies: [Movie] = []
     
     var theTotalPages = 1
     var currentPage = 1
@@ -86,40 +87,40 @@ class ViewController: UIViewController {
         
         activitySpinner.startAnimating()
         
-        TwitterAPI().getMovieAsync(theMovie: currentMovie, thePage: currentPage, theModel: theMovies) { [unowned self] (result) in
+        TwitterAPI().getMovieAsync(theMovie: currentMovie, thePage: currentPage) { [unowned self] (result) in
             
             switch result {
 
-            case .success(let movieDictionary):
+            case .success(let films):
 
-                if let thePageCount = movieDictionary.theModel["total_pages"] as? Int,
-                    let theMoviesModel = movieDictionary.theModel["results"] as? [ [String:Any] ] {
+                    self.theTotalPages = films.totalPages
 
-                    self.theTotalPages = thePageCount
-                    
-                    if theMoviesModel.count > 0,
-                    let theMovieArray = self.theMovies.theModel["results"] as? [ [String:Any] ] {
-                        
+                    if films.all.count > 0 {
+
                         if self.newPageState == PageState.FromPaginate { //adding new pages to existing movie
-                            
+
                             //scroll on to next page in tableview by adding new pages
-                            self.theMovies.theMovies.append(contentsOf: theMoviesModel)
+//                            self.theMovies.theMovies.append(contentsOf: theMoviesModel)
+                            self.movies.append(contentsOf: films.all)
                             
                         }
                         else if self.newPageState == PageState.FromSearch { //user intiated a search
-                            
-                            self.theMovies.theMovies.removeAll(keepingCapacity: false)
+
+ //                           self.theMovies.theMovies.removeAll(keepingCapacity: false)
+                            self.movies.removeAll(keepingCapacity: false)
                             self.currentPage = 1
 
-                            self.theMovies.theMovies = theMovieArray
+ //                           self.theMovies.theMovies = films.all
+                            self.movies = films.all
                         }
                         else if self.newPageState == PageState.InitialLoad { //first time loaded
-                            
+
                             self.currentPage = 1
 
-                            self.theMovies.theMovies = theMovieArray
+//                            self.theMovies.theMovies = films.all
+                            self.movies = films.all
                         }
-                        
+
                         DispatchQueue.main.async {
                             self.moviesTableView.reloadData()
                         }
@@ -127,7 +128,7 @@ class ViewController: UIViewController {
                     else {
                         self.showNoMovieFoundAlert()
                     }
-                }
+                
                 
             case .error(let error):
                 print(error.localizedDescription)
@@ -207,7 +208,7 @@ extension UIImageView {
         let theFilter = AspectScaledToFillSizeFilter(size: desiredSize)
         // AspectScaledToFitSizeFilter(size: size) //AspectScaledToFillSizeWithRoundedCornersFilter(size: size, radius: 20.0)
         
-        self.af_setImage(
+        self.af.setImage(
             withURL: url,
             placeholderImage: UIImage( named: defaultImage),
             filter: theFilter,
@@ -256,54 +257,48 @@ extension ViewController : UITextFieldDelegate {
 
 
 //extension to render tableview
-extension ViewController : UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: "showMovieDetail", sender: indexPath) //go show the movie details
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+
+extension ViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if theMovies.theMovies.count == 0 {
+        if self.movies.count == 0 {
             return 0
         }
         else {
-            return theMovies.theMovies.count
+            return self.movies.count
         }
-
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for:indexPath) as! MovieTableViewCell
         
-        if let theTitle = theMovies.theMovies[indexPath.row]["original_title"] as? String {
+//        if let theTitle = self.movies[indexPath.row].originalTitle as? String {
             DispatchQueue.main.async {
-                cell.movieTitle.text = theTitle
+                cell.movieTitle.text = self.movies[indexPath.row].originalTitle
             }
-        }
-        else {
-            DispatchQueue.main.async {
-                cell.movieTitle.text = ""
-            }
-        }
+//        }
+//        else {
+//            DispatchQueue.main.async {
+//                cell.movieTitle.text = ""
+//            }
+//        }
         
-        if let theOverview = theMovies.theMovies[indexPath.row]["overview"] as? String {
+//        if let theOverview = theMovies.theMovies[indexPath.row]["overview"] as? String {
             DispatchQueue.main.async {
-                cell.movieOverview.text = theOverview
+                cell.movieOverview.text = self.movies[indexPath.row].overview
             }
-        }
-        else {
-            DispatchQueue.main.async {
-                cell.movieOverview.text = ""
-            }
-        }
+//        }
+//        else {
+//            DispatchQueue.main.async {
+//                cell.movieOverview.text = ""
+//            }
+//        }
         
-        if let thePosterPath = theMovies.theMovies[indexPath.row]["poster_path"] as? String {
-        
+        if let thePosterPath = self.movies[indexPath.row].posterPath {
+            
             let thePosterImageURLString = TwitterAPI().ImageBaseURL + thePosterPath
             
             DispatchQueue.main.async {
@@ -317,7 +312,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         }
         
         //handle pagination to next page of movies if any other pages exist
-        if indexPath.row == theMovies.theMovies.count - 1 && currentPage < theTotalPages {
+        if indexPath.row == self.movies.count - 1 && currentPage < theTotalPages {
             
             newPageState = PageState.FromPaginate
             currentPage = currentPage + 1
@@ -328,3 +323,20 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+extension ViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "showMovieDetail", sender: indexPath) //go show the movie details
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
+    
+}
+
+
+
+
