@@ -1,19 +1,6 @@
 # twitter
 
-this project uses carthage as a package manager
-
-ensure carthage is installed
-this link has the details:
-
-https://github.com/Carthage/Carthage
-
-otherwise use this command:
-
-brew install carthage
-
-the "cartfile" exists in the project with dependencies included already. just run the update:
-"carthage update" to update dependencies
-
+this project uses xcode package manager
 
 
 Main operation of the App:
