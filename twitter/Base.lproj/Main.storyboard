@@ -82,13 +82,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RVd-xT-jQY">
                                                             <rect key="frame" x="169" y="83.666666666666671" width="186" height="61.000000000000014"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Harry Potter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owB-Uc-5BO">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owB-Uc-5BO">
                                                                     <rect key="frame" x="0.0" y="0.0" width="186" height="24"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Harry lived under the stairs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo1-iC-ZDw">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry lived under the stairs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo1-iC-ZDw">
                                                                     <rect key="frame" x="0.0" y="44" width="186" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
@@ -191,6 +191,7 @@
                             <constraint firstItem="aqb-4E-vaq" firstAttribute="leading" secondItem="00U-2G-k6k" secondAttribute="leading" constant="20" id="6c5-0M-D3D"/>
                             <constraint firstItem="00U-2G-k6k" firstAttribute="trailing" secondItem="aqb-4E-vaq" secondAttribute="trailing" constant="20" id="GnR-3z-nKm"/>
                             <constraint firstItem="aqb-4E-vaq" firstAttribute="top" secondItem="Nqx-3r-dCc" secondAttribute="bottom" constant="30" id="J7r-Zi-6xU"/>
+                            <constraint firstItem="Nqx-3r-dCc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="OCX-BQ-isU" secondAttribute="trailing" constant="62.670000000000002" id="N2b-n4-IhW"/>
                             <constraint firstItem="Nqx-3r-dCc" firstAttribute="centerX" secondItem="cpw-7x-cX8" secondAttribute="centerX" id="X3s-P6-hmA"/>
                             <constraint firstItem="Nqx-3r-dCc" firstAttribute="top" secondItem="00U-2G-k6k" secondAttribute="top" constant="10" id="wfA-py-ifm"/>
                             <constraint firstItem="OCX-BQ-isU" firstAttribute="leading" secondItem="00U-2G-k6k" secondAttribute="leading" constant="16" id="xUG-Gp-jMh"/>
