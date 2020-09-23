@@ -100,17 +100,14 @@ class ViewController: UIViewController {
                         if self.newPageState == PageState.FromPaginate { //adding new pages to existing movie
 
                             //scroll on to next page in tableview by adding new pages
-//                            self.theMovies.theMovies.append(contentsOf: theMoviesModel)
                             self.movies.append(contentsOf: films.all)
                             
                         }
                         else if self.newPageState == PageState.FromSearch { //user intiated a search
 
- //                           self.theMovies.theMovies.removeAll(keepingCapacity: false)
                             self.movies.removeAll(keepingCapacity: false)
                             self.currentPage = 1
 
- //                           self.theMovies.theMovies = films.all
                             self.movies = films.all
                         }
                         else if self.newPageState == PageState.InitialLoad { //first time loaded
