@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/Alamofire/AlamofireImage.git",
         "state": {
           "branch": null,
-          "revision": "62a37b377db3fb705b3e336f945cbf4d58f4ae06",
-          "version": "4.0.0"
+          "revision": "3e8edbeb75227f8542aa87f90240cf0424d6362f",
+          "version": "4.1.0"
         }
       }
     ]
