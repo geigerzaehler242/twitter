@@ -22,8 +22,7 @@ class ViewController: UIViewController {
     private let minHeaderHeight: CGFloat = 40;
     private var previousScrollOffset: CGFloat = 0;
     
-//    var theMovies = Movies() //create instance of the model
-    var movies: [Movie] = []
+    var movies: [Movie] = [] //create instance of the model
     
     var theTotalPages = 1
     var currentPage = 1
@@ -113,8 +112,6 @@ class ViewController: UIViewController {
                         else if self.newPageState == PageState.InitialLoad { //first time loaded
 
                             self.currentPage = 1
-
-//                            self.theMovies.theMovies = films.all
                             self.movies = films.all
                         }
 
@@ -272,40 +269,18 @@ extension ViewController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for:indexPath) as! MovieTableViewCell
         
-//        if let theTitle = self.movies[indexPath.row].originalTitle as? String {
-            DispatchQueue.main.async {
                 cell.movieTitle.text = self.movies[indexPath.row].originalTitle
-            }
-//        }
-//        else {
-//            DispatchQueue.main.async {
-//                cell.movieTitle.text = ""
-//            }
-//        }
-        
-//        if let theOverview = theMovies.theMovies[indexPath.row]["overview"] as? String {
-            DispatchQueue.main.async {
+
                 cell.movieOverview.text = self.movies[indexPath.row].overview
-            }
-//        }
-//        else {
-//            DispatchQueue.main.async {
-//                cell.movieOverview.text = ""
-//            }
-//        }
         
         if let thePosterPath = self.movies[indexPath.row].posterPath {
             
             let thePosterImageURLString = TwitterAPI().ImageBaseURL + thePosterPath
             
-            DispatchQueue.main.async {
                 cell.movieImage.loadImageFromURL(URL(string: thePosterImageURLString)!, resize: false, defaultImage: "whitebird", desiredSize: CGSize(width: 600.0, height: 900.0), trim: false, forceFade: false)
-            }
         }
         else {
-            DispatchQueue.main.async {
                 cell.movieImage.image = UIImage(named: "whitebird") //default image
-            }
         }
         
         //handle pagination to next page of movies if any other pages exist

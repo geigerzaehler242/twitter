@@ -65,6 +65,7 @@
 		ED0799BA222C06BE00994867 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		ED0799BC222C412100994867 /* twitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterViewController.swift; sourceTree = "<group>"; };
 		ED0799BF222C512500994867 /* MockMoviesJson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MockMoviesJson.txt; sourceTree = "<group>"; };
+		ED24BB2A251C12FB007428E5 /* twitter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = twitter.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 		ED0799772228B1E000994867 /* twitter */ = {
 			isa = PBXGroup;
 			children = (
+				ED24BB2A251C12FB007428E5 /* twitter.entitlements */,
 				ED0799B9222C069C00994867 /* Models */,
 				ED0799A92228B9D500994867 /* API */,
 				ED0799782228B1E000994867 /* AppDelegate.swift */,
@@ -505,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = twitter/twitter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z79254QWB6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -515,6 +518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = f.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -524,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = twitter/twitter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z79254QWB6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -534,6 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = f.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
